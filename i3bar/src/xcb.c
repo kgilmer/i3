@@ -112,9 +112,47 @@ struct xcb_colors_t {
     color_t urgent_ws_bg;
     color_t urgent_ws_fg;
     color_t urgent_ws_border;
-    color_t focus_ws_bg;
-    color_t focus_ws_fg;
-    color_t focus_ws_border;
+
+    color_t focus_ws_bg_0;
+    color_t focus_ws_fg_0;
+    color_t focus_ws_border_0;
+
+    color_t focus_ws_bg_1;
+    color_t focus_ws_fg_1;
+    color_t focus_ws_border_1;
+
+    color_t focus_ws_bg_2;
+    color_t focus_ws_fg_2;
+    color_t focus_ws_border_2;
+
+    color_t focus_ws_bg_3;
+    color_t focus_ws_fg_3;
+    color_t focus_ws_border_3;
+
+    color_t focus_ws_bg_4;
+    color_t focus_ws_fg_4;
+    color_t focus_ws_border_4;
+
+    color_t focus_ws_bg_5;
+    color_t focus_ws_fg_5;
+    color_t focus_ws_border_5;
+
+    color_t focus_ws_bg_6;
+    color_t focus_ws_fg_6;
+    color_t focus_ws_border_6;
+
+    color_t focus_ws_bg_7;
+    color_t focus_ws_fg_7;
+    color_t focus_ws_border_7;
+
+    color_t focus_ws_bg_8;
+    color_t focus_ws_fg_8;
+    color_t focus_ws_border_8;
+
+    color_t focus_ws_bg_9;
+    color_t focus_ws_fg_9;
+    color_t focus_ws_border_9;
+
     color_t binding_mode_bg;
     color_t binding_mode_fg;
     color_t binding_mode_border;
@@ -415,9 +453,47 @@ void init_colors(const struct xcb_color_strings_t *new_colors) {
     PARSE_COLOR(urgent_ws_fg, "#FFFFFF");
     PARSE_COLOR(urgent_ws_bg, "#900000");
     PARSE_COLOR(urgent_ws_border, "#2f343a");
-    PARSE_COLOR(focus_ws_fg, "#FFFFFF");
-    PARSE_COLOR(focus_ws_bg, "#285577");
-    PARSE_COLOR(focus_ws_border, "#4c7899");
+    
+    PARSE_COLOR(focus_ws_fg_0, "#FFFFFF");
+    PARSE_COLOR(focus_ws_bg_0, "#285577");
+    PARSE_COLOR(focus_ws_border_0, "#4c7899");
+
+    PARSE_COLOR(focus_ws_fg_1, "#FFFFFF");
+    PARSE_COLOR(focus_ws_bg_1, "#285577");
+    PARSE_COLOR(focus_ws_border_1, "#4c7899");
+
+    PARSE_COLOR(focus_ws_fg_2, "#FFFFFF");
+    PARSE_COLOR(focus_ws_bg_2, "#285577");
+    PARSE_COLOR(focus_ws_border_2, "#4c7899");
+
+    PARSE_COLOR(focus_ws_fg_3, "#FFFFFF");
+    PARSE_COLOR(focus_ws_bg_3, "#285577");
+    PARSE_COLOR(focus_ws_border_3, "#4c7899");
+
+    PARSE_COLOR(focus_ws_fg_4, "#FFFFFF");
+    PARSE_COLOR(focus_ws_bg_4, "#285577");
+    PARSE_COLOR(focus_ws_border_4, "#4c7899");
+
+    PARSE_COLOR(focus_ws_fg_5, "#FFFFFF");
+    PARSE_COLOR(focus_ws_bg_5, "#285577");
+    PARSE_COLOR(focus_ws_border_5, "#4c7899");
+
+    PARSE_COLOR(focus_ws_fg_6, "#FFFFFF");
+    PARSE_COLOR(focus_ws_bg_6, "#285577");
+    PARSE_COLOR(focus_ws_border_6, "#4c7899");
+
+    PARSE_COLOR(focus_ws_fg_7, "#FFFFFF");
+    PARSE_COLOR(focus_ws_bg_7, "#285577");
+    PARSE_COLOR(focus_ws_border_7, "#4c7899");
+
+    PARSE_COLOR(focus_ws_fg_8, "#FFFFFF");
+    PARSE_COLOR(focus_ws_bg_8, "#285577");
+    PARSE_COLOR(focus_ws_border_8, "#4c7899");
+
+    PARSE_COLOR(focus_ws_fg_9, "#FFFFFF");
+    PARSE_COLOR(focus_ws_bg_9, "#285577");
+    PARSE_COLOR(focus_ws_border_9, "#4c7899");
+
 #undef PARSE_COLOR
 
 #define PARSE_COLOR_FALLBACK(name, fallback)                                                         \
@@ -1897,8 +1973,8 @@ void draw_bars(bool unhide) {
         if (!config.disable_ws) {
             i3_ws *ws_walk;
             TAILQ_FOREACH(ws_walk, outputs_walk->workspaces, tailq) {
-                DLOG("Drawing button for WS %s at x = %d, len = %d\n",
-                     i3string_as_utf8(ws_walk->name), workspace_width, ws_walk->name_width);
+                DLOG("KGWH Drawing button for WS %s (%d) at x = %d, len = %d\n",
+                     i3string_as_utf8(ws_walk->name), ws_walk->num, workspace_width, ws_walk->name_width);
                 color_t fg_color = colors.inactive_ws_fg;
                 color_t bg_color = colors.inactive_ws_bg;
                 color_t border_color = colors.inactive_ws_border;
@@ -1908,9 +1984,67 @@ void draw_bars(bool unhide) {
                         bg_color = colors.active_ws_bg;
                         border_color = colors.active_ws_border;
                     } else {
-                        fg_color = colors.focus_ws_fg;
-                        bg_color = colors.focus_ws_bg;
-                        border_color = colors.focus_ws_border;
+                        DLOG("KGWH drawing indexed color");
+
+                        switch (ws_walk->num)
+                        {
+                            case 1:
+                                    fg_color = colors.focus_ws_fg_0;
+                                    bg_color = colors.focus_ws_bg_0;
+                                    border_color = colors.focus_ws_border_0;
+                                break;
+                            case 2:
+                                    fg_color = colors.focus_ws_fg_1;
+                                    bg_color = colors.focus_ws_bg_1;
+                                    border_color = colors.focus_ws_border_1;
+                                break;
+                            case 3:
+                                    fg_color = colors.focus_ws_fg_2;
+                                    bg_color = colors.focus_ws_bg_2;
+                                    border_color = colors.focus_ws_border_2;
+                                break;
+                            case 4:
+                                    fg_color = colors.focus_ws_fg_3;
+                                    bg_color = colors.focus_ws_bg_3;
+                                    border_color = colors.focus_ws_border_3;
+                                break;
+                            case 5:
+                                    fg_color = colors.focus_ws_fg_4;
+                                    bg_color = colors.focus_ws_bg_4;
+                                    border_color = colors.focus_ws_border_4;
+                                break;
+                            case 6:
+                                    fg_color = colors.focus_ws_fg_5;
+                                    bg_color = colors.focus_ws_bg_5;
+                                    border_color = colors.focus_ws_border_5;
+                                break;
+                            case 7:
+                                    fg_color = colors.focus_ws_fg_6;
+                                    bg_color = colors.focus_ws_bg_6;
+                                    border_color = colors.focus_ws_border_6;
+                                break;
+                            case 8:
+                                    fg_color = colors.focus_ws_fg_7;
+                                    bg_color = colors.focus_ws_bg_7;
+                                    border_color = colors.focus_ws_border_7;
+                                break;
+                            case 9:
+                                    fg_color = colors.focus_ws_fg_8;
+                                    bg_color = colors.focus_ws_bg_8;
+                                    border_color = colors.focus_ws_border_8;
+                                break;
+                            case 10:
+                                    fg_color = colors.focus_ws_fg_9;
+                                    bg_color = colors.focus_ws_bg_9;
+                                    border_color = colors.focus_ws_border_9;
+                                break;
+                            default:
+                                    DLOG("KGWH default colors used.");
+                                    fg_color = colors.focus_ws_fg_0;
+                                    bg_color = colors.focus_ws_bg_0;
+                                    border_color = colors.focus_ws_border_0;
+                                break;
+                        }
                     }
                 }
                 if (ws_walk->urgent) {

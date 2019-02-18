@@ -349,9 +349,45 @@ struct Barconfig {
         char *focused_statusline;
         char *focused_separator;
 
-        char *focused_workspace_border;
-        char *focused_workspace_bg;
-        char *focused_workspace_text;
+        char *focused_workspace_0_border;
+        char *focused_workspace_0_bg;
+        char *focused_workspace_0_text;
+
+        char *focused_workspace_1_border;
+        char *focused_workspace_1_bg;
+        char *focused_workspace_1_text;
+
+        char *focused_workspace_2_border;
+        char *focused_workspace_2_bg;
+        char *focused_workspace_2_text;
+
+        char *focused_workspace_3_border;
+        char *focused_workspace_3_bg;
+        char *focused_workspace_3_text;
+
+        char *focused_workspace_4_border;
+        char *focused_workspace_4_bg;
+        char *focused_workspace_4_text;
+
+        char *focused_workspace_5_border;
+        char *focused_workspace_5_bg;
+        char *focused_workspace_5_text;
+
+        char *focused_workspace_6_border;
+        char *focused_workspace_6_bg;
+        char *focused_workspace_6_text;
+
+        char *focused_workspace_7_border;
+        char *focused_workspace_7_bg;
+        char *focused_workspace_7_text;
+
+        char *focused_workspace_8_border;
+        char *focused_workspace_8_bg;
+        char *focused_workspace_8_text;
+
+        char *focused_workspace_9_border;
+        char *focused_workspace_9_bg;
+        char *focused_workspace_9_text;
 
         char *active_workspace_border;
         char *active_workspace_bg;

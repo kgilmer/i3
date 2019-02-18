@@ -151,9 +151,47 @@ void load_configuration(xcb_connection_t *conn, const char *override_configpath,
             FREE(barconfig->colors.focused_background);
             FREE(barconfig->colors.focused_statusline);
             FREE(barconfig->colors.focused_separator);
-            FREE(barconfig->colors.focused_workspace_border);
-            FREE(barconfig->colors.focused_workspace_bg);
-            FREE(barconfig->colors.focused_workspace_text);
+
+            FREE(barconfig->colors.focused_workspace_0_border);
+            FREE(barconfig->colors.focused_workspace_0_bg);
+            FREE(barconfig->colors.focused_workspace_0_text);
+            
+            FREE(barconfig->colors.focused_workspace_1_border);
+            FREE(barconfig->colors.focused_workspace_1_bg);
+            FREE(barconfig->colors.focused_workspace_1_text);
+            
+            FREE(barconfig->colors.focused_workspace_2_border);
+            FREE(barconfig->colors.focused_workspace_2_bg);
+            FREE(barconfig->colors.focused_workspace_2_text);
+            
+            FREE(barconfig->colors.focused_workspace_3_border);
+            FREE(barconfig->colors.focused_workspace_3_bg);
+            FREE(barconfig->colors.focused_workspace_3_text);
+            
+            FREE(barconfig->colors.focused_workspace_4_border);
+            FREE(barconfig->colors.focused_workspace_4_bg);
+            FREE(barconfig->colors.focused_workspace_4_text);
+            
+            FREE(barconfig->colors.focused_workspace_5_border);
+            FREE(barconfig->colors.focused_workspace_5_bg);
+            FREE(barconfig->colors.focused_workspace_5_text);
+            
+            FREE(barconfig->colors.focused_workspace_6_border);
+            FREE(barconfig->colors.focused_workspace_6_bg);
+            FREE(barconfig->colors.focused_workspace_6_text);
+            
+            FREE(barconfig->colors.focused_workspace_7_border);
+            FREE(barconfig->colors.focused_workspace_7_bg);
+            FREE(barconfig->colors.focused_workspace_7_text);
+            
+            FREE(barconfig->colors.focused_workspace_8_border);
+            FREE(barconfig->colors.focused_workspace_8_bg);
+            FREE(barconfig->colors.focused_workspace_8_text);
+            
+            FREE(barconfig->colors.focused_workspace_9_border);
+            FREE(barconfig->colors.focused_workspace_9_bg);
+            FREE(barconfig->colors.focused_workspace_9_text);
+            
             FREE(barconfig->colors.active_workspace_border);
             FREE(barconfig->colors.active_workspace_bg);
             FREE(barconfig->colors.active_workspace_text);

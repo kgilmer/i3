@@ -583,7 +583,17 @@ CFGFUN(bar_color, const char *colorclass, const char *border, const char *backgr
         }                                                                 \
     } while (0)
 
-    APPLY_COLORS(focused_workspace);
+    APPLY_COLORS(focused_workspace_0);
+    APPLY_COLORS(focused_workspace_1);
+    APPLY_COLORS(focused_workspace_2);
+    APPLY_COLORS(focused_workspace_3);
+    APPLY_COLORS(focused_workspace_4);
+    APPLY_COLORS(focused_workspace_5);
+    APPLY_COLORS(focused_workspace_6);
+    APPLY_COLORS(focused_workspace_7);
+    APPLY_COLORS(focused_workspace_8);
+    APPLY_COLORS(focused_workspace_9);
+
     APPLY_COLORS(active_workspace);
     APPLY_COLORS(inactive_workspace);
     APPLY_COLORS(urgent_workspace);

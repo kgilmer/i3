@@ -239,9 +239,47 @@ static int config_string_cb(void *params_, const unsigned char *val, size_t _len
     COLOR(focused_statusline, focus_bar_fg);
     COLOR(focused_background, focus_bar_bg);
     COLOR(focused_separator, focus_sep_fg);
-    COLOR(focused_workspace_border, focus_ws_border);
-    COLOR(focused_workspace_bg, focus_ws_bg);
-    COLOR(focused_workspace_text, focus_ws_fg);
+
+    COLOR(focused_workspace_0_border, focus_ws_border_0);
+    COLOR(focused_workspace_0_bg, focus_ws_bg_0);
+    COLOR(focused_workspace_0_text, focus_ws_fg_0);
+
+    COLOR(focused_workspace_1_border, focus_ws_border_1);
+    COLOR(focused_workspace_1_bg, focus_ws_bg_1);
+    COLOR(focused_workspace_1_text, focus_ws_fg_1);
+
+    COLOR(focused_workspace_2_border, focus_ws_border_2);
+    COLOR(focused_workspace_2_bg, focus_ws_bg_2);
+    COLOR(focused_workspace_2_text, focus_ws_fg_2);
+
+    COLOR(focused_workspace_3_border, focus_ws_border_3);
+    COLOR(focused_workspace_3_bg, focus_ws_bg_3);
+    COLOR(focused_workspace_3_text, focus_ws_fg_3);
+
+    COLOR(focused_workspace_4_border, focus_ws_border_4);
+    COLOR(focused_workspace_4_bg, focus_ws_bg_4);
+    COLOR(focused_workspace_4_text, focus_ws_fg_4);
+
+    COLOR(focused_workspace_5_border, focus_ws_border_5);
+    COLOR(focused_workspace_5_bg, focus_ws_bg_5);
+    COLOR(focused_workspace_5_text, focus_ws_fg_5);
+
+    COLOR(focused_workspace_6_border, focus_ws_border_6);
+    COLOR(focused_workspace_6_bg, focus_ws_bg_6);
+    COLOR(focused_workspace_6_text, focus_ws_fg_6);
+
+    COLOR(focused_workspace_7_border, focus_ws_border_7);
+    COLOR(focused_workspace_7_bg, focus_ws_bg_7);
+    COLOR(focused_workspace_7_text, focus_ws_fg_7);
+
+    COLOR(focused_workspace_8_border, focus_ws_border_8);
+    COLOR(focused_workspace_8_bg, focus_ws_bg_8);
+    COLOR(focused_workspace_8_text, focus_ws_fg_8);
+
+    COLOR(focused_workspace_9_border, focus_ws_border_9);
+    COLOR(focused_workspace_9_bg, focus_ws_bg_9);
+    COLOR(focused_workspace_9_text, focus_ws_fg_9);
+
     COLOR(active_workspace_border, active_ws_border);
     COLOR(active_workspace_bg, active_ws_bg);
     COLOR(active_workspace_text, active_ws_fg);
@@ -410,9 +448,47 @@ void free_colors(struct xcb_color_strings_t *colors) {
     FREE_COLOR(urgent_ws_fg);
     FREE_COLOR(urgent_ws_bg);
     FREE_COLOR(urgent_ws_border);
-    FREE_COLOR(focus_ws_fg);
-    FREE_COLOR(focus_ws_bg);
-    FREE_COLOR(focus_ws_border);
+
+    FREE_COLOR(focus_ws_fg_0);
+    FREE_COLOR(focus_ws_bg_0);
+    FREE_COLOR(focus_ws_border_0);
+
+    FREE_COLOR(focus_ws_fg_1);
+    FREE_COLOR(focus_ws_bg_1);
+    FREE_COLOR(focus_ws_border_1);
+
+    FREE_COLOR(focus_ws_fg_2);
+    FREE_COLOR(focus_ws_bg_2);
+    FREE_COLOR(focus_ws_border_2);
+
+    FREE_COLOR(focus_ws_fg_3);
+    FREE_COLOR(focus_ws_bg_3);
+    FREE_COLOR(focus_ws_border_3);
+
+    FREE_COLOR(focus_ws_fg_4);
+    FREE_COLOR(focus_ws_bg_4);
+    FREE_COLOR(focus_ws_border_4);
+
+    FREE_COLOR(focus_ws_fg_5);
+    FREE_COLOR(focus_ws_bg_5);
+    FREE_COLOR(focus_ws_border_5);
+
+    FREE_COLOR(focus_ws_fg_6);
+    FREE_COLOR(focus_ws_bg_6);
+    FREE_COLOR(focus_ws_border_6);
+
+    FREE_COLOR(focus_ws_fg_7);
+    FREE_COLOR(focus_ws_bg_7);
+    FREE_COLOR(focus_ws_border_7);
+
+    FREE_COLOR(focus_ws_fg_8);
+    FREE_COLOR(focus_ws_bg_8);
+    FREE_COLOR(focus_ws_border_8);
+
+    FREE_COLOR(focus_ws_fg_9);
+    FREE_COLOR(focus_ws_bg_9);
+    FREE_COLOR(focus_ws_border_9);
+
     FREE_COLOR(binding_mode_fg);
     FREE_COLOR(binding_mode_bg);
     FREE_COLOR(binding_mode_border);

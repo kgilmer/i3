@@ -415,6 +415,7 @@ xcb_char2b_t *convert_utf8_to_ucs2(char *input, size_t *real_strlen);
 typedef struct color_t {
     double red;
     double green;
+    
     double blue;
     double alpha;
 
