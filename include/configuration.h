@@ -393,9 +393,46 @@ struct Barconfig {
         char *active_workspace_bg;
         char *active_workspace_text;
 
-        char *inactive_workspace_border;
-        char *inactive_workspace_bg;
-        char *inactive_workspace_text;
+        char *inactiveed_workspace_0_border;
+        char *inactiveed_workspace_0_bg;
+        char *inactiveed_workspace_0_text;
+
+        char *inactiveed_workspace_1_border;
+        char *inactiveed_workspace_1_bg;
+        char *inactiveed_workspace_1_text;
+
+        char *inactiveed_workspace_2_border;
+        char *inactiveed_workspace_2_bg;
+        char *inactiveed_workspace_2_text;
+
+        char *inactiveed_workspace_3_border;
+        char *inactiveed_workspace_3_bg;
+        char *inactiveed_workspace_3_text;
+
+        char *inactiveed_workspace_4_border;
+        char *inactiveed_workspace_4_bg;
+        char *inactiveed_workspace_4_text;
+
+        char *inactiveed_workspace_5_border;
+        char *inactiveed_workspace_5_bg;
+        char *inactiveed_workspace_5_text;
+
+        char *inactiveed_workspace_6_border;
+        char *inactiveed_workspace_6_bg;
+        char *inactiveed_workspace_6_text;
+
+        char *inactiveed_workspace_7_border;
+        char *inactiveed_workspace_7_bg;
+        char *inactiveed_workspace_7_text;
+
+        char *inactiveed_workspace_8_border;
+        char *inactiveed_workspace_8_bg;
+        char *inactiveed_workspace_8_text;
+
+        char *inactiveed_workspace_9_border;
+        char *inactiveed_workspace_9_bg;
+        char *inactiveed_workspace_9_text;
+
 
         char *urgent_workspace_border;
         char *urgent_workspace_bg;

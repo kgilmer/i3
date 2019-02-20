@@ -854,9 +854,47 @@ static void dump_bar_config(yajl_gen gen, Barconfig *config) {
     YSTR_IF_SET(active_workspace_border);
     YSTR_IF_SET(active_workspace_bg);
     YSTR_IF_SET(active_workspace_text);
-    YSTR_IF_SET(inactive_workspace_border);
-    YSTR_IF_SET(inactive_workspace_bg);
-    YSTR_IF_SET(inactive_workspace_text);
+
+    YSTR_IF_SET(inactive_workspace_0_border);
+    YSTR_IF_SET(inactive_workspace_0_bg);
+    YSTR_IF_SET(inactive_workspace_0_text);
+    
+    YSTR_IF_SET(inactive_workspace_1_border);
+    YSTR_IF_SET(inactive_workspace_1_bg);
+    YSTR_IF_SET(inactive_workspace_1_text);
+    
+    YSTR_IF_SET(inactive_workspace_2_border);
+    YSTR_IF_SET(inactive_workspace_2_bg);
+    YSTR_IF_SET(inactive_workspace_2_text);
+    
+    YSTR_IF_SET(inactive_workspace_3_border);
+    YSTR_IF_SET(inactive_workspace_3_bg);
+    YSTR_IF_SET(inactive_workspace_3_text);
+    
+    YSTR_IF_SET(inactive_workspace_4_border);
+    YSTR_IF_SET(inactive_workspace_4_bg);
+    YSTR_IF_SET(inactive_workspace_4_text);
+    
+    YSTR_IF_SET(inactive_workspace_5_border);
+    YSTR_IF_SET(inactive_workspace_5_bg);
+    YSTR_IF_SET(inactive_workspace_5_text);
+    
+    YSTR_IF_SET(inactive_workspace_6_border);
+    YSTR_IF_SET(inactive_workspace_6_bg);
+    YSTR_IF_SET(inactive_workspace_6_text);
+    
+    YSTR_IF_SET(inactive_workspace_7_border);
+    YSTR_IF_SET(inactive_workspace_7_bg);
+    YSTR_IF_SET(inactive_workspace_7_text);
+    
+    YSTR_IF_SET(inactive_workspace_8_border);
+    YSTR_IF_SET(inactive_workspace_8_bg);
+    YSTR_IF_SET(inactive_workspace_8_text);
+    
+    YSTR_IF_SET(inactive_workspace_9_border);
+    YSTR_IF_SET(inactive_workspace_9_bg);
+    YSTR_IF_SET(inactive_workspace_9_text);
+
     YSTR_IF_SET(urgent_workspace_border);
     YSTR_IF_SET(urgent_workspace_bg);
     YSTR_IF_SET(urgent_workspace_text);

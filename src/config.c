@@ -195,9 +195,49 @@ void load_configuration(xcb_connection_t *conn, const char *override_configpath,
             FREE(barconfig->colors.active_workspace_border);
             FREE(barconfig->colors.active_workspace_bg);
             FREE(barconfig->colors.active_workspace_text);
-            FREE(barconfig->colors.inactive_workspace_border);
-            FREE(barconfig->colors.inactive_workspace_bg);
-            FREE(barconfig->colors.inactive_workspace_text);
+
+            FREE(barconfig->colors.inactive_workspace_0_border);
+            FREE(barconfig->colors.inactive_workspace_0_bg);
+            FREE(barconfig->colors.inactive_workspace_0_text);
+            
+            FREE(barconfig->colors.inactive_workspace_1_border);
+            FREE(barconfig->colors.inactive_workspace_1_bg);
+            FREE(barconfig->colors.inactive_workspace_1_text);
+            
+            FREE(barconfig->colors.inactive_workspace_2_border);
+            FREE(barconfig->colors.inactive_workspace_2_bg);
+            FREE(barconfig->colors.inactive_workspace_2_text);
+            
+            FREE(barconfig->colors.inactive_workspace_3_border);
+            FREE(barconfig->colors.inactive_workspace_3_bg);
+            FREE(barconfig->colors.inactive_workspace_3_text);
+            
+            FREE(barconfig->colors.inactive_workspace_4_border);
+            FREE(barconfig->colors.inactive_workspace_4_bg);
+            FREE(barconfig->colors.inactive_workspace_4_text);
+            
+            FREE(barconfig->colors.inactive_workspace_5_border);
+            FREE(barconfig->colors.inactive_workspace_5_bg);
+            FREE(barconfig->colors.inactive_workspace_5_text);
+            
+            FREE(barconfig->colors.inactive_workspace_6_border);
+            FREE(barconfig->colors.inactive_workspace_6_bg);
+            FREE(barconfig->colors.inactive_workspace_6_text);
+            
+            FREE(barconfig->colors.inactive_workspace_7_border);
+            FREE(barconfig->colors.inactive_workspace_7_bg);
+            FREE(barconfig->colors.inactive_workspace_7_text);
+            
+            FREE(barconfig->colors.inactive_workspace_8_border);
+            FREE(barconfig->colors.inactive_workspace_8_bg);
+            FREE(barconfig->colors.inactive_workspace_8_text);
+            
+            FREE(barconfig->colors.inactive_workspace_9_border);
+            FREE(barconfig->colors.inactive_workspace_9_bg);
+            FREE(barconfig->colors.inactive_workspace_9_text);
+
+
+
             FREE(barconfig->colors.urgent_workspace_border);
             FREE(barconfig->colors.urgent_workspace_bg);
             FREE(barconfig->colors.urgent_workspace_text);

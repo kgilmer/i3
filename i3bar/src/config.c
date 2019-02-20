@@ -283,9 +283,48 @@ static int config_string_cb(void *params_, const unsigned char *val, size_t _len
     COLOR(active_workspace_border, active_ws_border);
     COLOR(active_workspace_bg, active_ws_bg);
     COLOR(active_workspace_text, active_ws_fg);
-    COLOR(inactive_workspace_border, inactive_ws_border);
-    COLOR(inactive_workspace_bg, inactive_ws_bg);
-    COLOR(inactive_workspace_text, inactive_ws_fg);
+
+    COLOR(inactive_workspace_0_border, inactive_ws_border_0);
+    COLOR(inactive_workspace_0_bg, inactive_ws_bg_0);
+    COLOR(inactive_workspace_0_text, inactive_ws_fg_0);
+
+    COLOR(inactive_workspace_1_border, inactive_ws_border_1);
+    COLOR(inactive_workspace_1_bg, inactive_ws_bg_1);
+    COLOR(inactive_workspace_1_text, inactive_ws_fg_1);
+
+    COLOR(inactive_workspace_2_border, inactive_ws_border_2);
+    COLOR(inactive_workspace_2_bg, inactive_ws_bg_2);
+    COLOR(inactive_workspace_2_text, inactive_ws_fg_2);
+
+    COLOR(inactive_workspace_3_border, inactive_ws_border_3);
+    COLOR(inactive_workspace_3_bg, inactive_ws_bg_3);
+    COLOR(inactive_workspace_3_text, inactive_ws_fg_3);
+
+    COLOR(inactive_workspace_4_border, inactive_ws_border_4);
+    COLOR(inactive_workspace_4_bg, inactive_ws_bg_4);
+    COLOR(inactive_workspace_4_text, inactive_ws_fg_4);
+
+    COLOR(inactive_workspace_5_border, inactive_ws_border_5);
+    COLOR(inactive_workspace_5_bg, inactive_ws_bg_5);
+    COLOR(inactive_workspace_5_text, inactive_ws_fg_5);
+
+    COLOR(inactive_workspace_6_border, inactive_ws_border_6);
+    COLOR(inactive_workspace_6_bg, inactive_ws_bg_6);
+    COLOR(inactive_workspace_6_text, inactive_ws_fg_6);
+
+    COLOR(inactive_workspace_7_border, inactive_ws_border_7);
+    COLOR(inactive_workspace_7_bg, inactive_ws_bg_7);
+    COLOR(inactive_workspace_7_text, inactive_ws_fg_7);
+
+    COLOR(inactive_workspace_8_border, inactive_ws_border_8);
+    COLOR(inactive_workspace_8_bg, inactive_ws_bg_8);
+    COLOR(inactive_workspace_8_text, inactive_ws_fg_8);
+
+    COLOR(inactive_workspace_9_border, inactive_ws_border_9);
+    COLOR(inactive_workspace_9_bg, inactive_ws_bg_9);
+    COLOR(inactive_workspace_9_text, inactive_ws_fg_9);
+
+
     COLOR(urgent_workspace_border, urgent_ws_border);
     COLOR(urgent_workspace_bg, urgent_ws_bg);
     COLOR(urgent_workspace_text, urgent_ws_fg);
@@ -442,9 +481,47 @@ void free_colors(struct xcb_color_strings_t *colors) {
     FREE_COLOR(active_ws_fg);
     FREE_COLOR(active_ws_bg);
     FREE_COLOR(active_ws_border);
-    FREE_COLOR(inactive_ws_fg);
-    FREE_COLOR(inactive_ws_bg);
-    FREE_COLOR(inactive_ws_border);
+
+    FREE_COLOR(inactive_ws_fg_0);
+    FREE_COLOR(inactive_ws_bg_0);
+    FREE_COLOR(inactive_ws_border_0);
+
+    FREE_COLOR(inactive_ws_fg_1);
+    FREE_COLOR(inactive_ws_bg_1);
+    FREE_COLOR(inactive_ws_border_1);
+
+    FREE_COLOR(inactive_ws_fg_2);
+    FREE_COLOR(inactive_ws_bg_2);
+    FREE_COLOR(inactive_ws_border_2);
+
+    FREE_COLOR(inactive_ws_fg_3);
+    FREE_COLOR(inactive_ws_bg_3);
+    FREE_COLOR(inactive_ws_border_3);
+
+    FREE_COLOR(inactive_ws_fg_4);
+    FREE_COLOR(inactive_ws_bg_4);
+    FREE_COLOR(inactive_ws_border_4);
+
+    FREE_COLOR(inactive_ws_fg_5);
+    FREE_COLOR(inactive_ws_bg_5);
+    FREE_COLOR(inactive_ws_border_5);
+
+    FREE_COLOR(inactive_ws_fg_6);
+    FREE_COLOR(inactive_ws_bg_6);
+    FREE_COLOR(inactive_ws_border_6);
+
+    FREE_COLOR(inactive_ws_fg_7);
+    FREE_COLOR(inactive_ws_bg_7);
+    FREE_COLOR(inactive_ws_border_7);
+
+    FREE_COLOR(inactive_ws_fg_8);
+    FREE_COLOR(inactive_ws_bg_8);
+    FREE_COLOR(inactive_ws_border_8);
+
+    FREE_COLOR(inactive_ws_fg_9);
+    FREE_COLOR(inactive_ws_bg_9);
+    FREE_COLOR(inactive_ws_border_9);
+
     FREE_COLOR(urgent_ws_fg);
     FREE_COLOR(urgent_ws_bg);
     FREE_COLOR(urgent_ws_border);

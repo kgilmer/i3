@@ -36,9 +36,46 @@ struct xcb_color_strings_t {
     char *active_ws_fg;
     char *active_ws_bg;
     char *active_ws_border;
-    char *inactive_ws_fg;
-    char *inactive_ws_bg;
-    char *inactive_ws_border;
+
+    char *inactive_ws_bg_0;
+    char *inactive_ws_fg_0;
+    char *inactive_ws_border_0;
+
+    char *inactive_ws_bg_1;
+    char *inactive_ws_fg_1;
+    char *inactive_ws_border_1;
+
+    char *inactive_ws_bg_2;
+    char *inactive_ws_fg_2;
+    char *inactive_ws_border_2;
+
+    char *inactive_ws_bg_3;
+    char *inactive_ws_fg_3;
+    char *inactive_ws_border_3;
+
+    char *inactive_ws_bg_4;
+    char *inactive_ws_fg_4;
+    char *inactive_ws_border_4;
+
+    char *inactive_ws_bg_5;
+    char *inactive_ws_fg_5;
+    char *inactive_ws_border_5;
+
+    char *inactive_ws_bg_6;
+    char *inactive_ws_fg_6;
+    char *inactive_ws_border_6;
+
+    char *inactive_ws_bg_7;
+    char *inactive_ws_fg_7;
+    char *inactive_ws_border_7;
+
+    char *inactive_ws_bg_8;
+    char *inactive_ws_fg_8;
+    char *inactive_ws_border_8;
+
+    char *inactive_ws_bg_9;
+    char *inactive_ws_fg_9;
+    char *inactive_ws_border_9;
 
     char *focus_ws_bg_0;
     char *focus_ws_fg_0;
