@@ -5,12 +5,7 @@ echo-version:
 
 bin_PROGRAMS = \
 	i3 \
-	i3bar/i3bar \
-	i3-config-wizard/i3-config-wizard \
-	i3-dump-log/i3-dump-log \
-	i3-input/i3-input \
-	i3-msg/i3-msg \
-	i3-nagbar/i3-nagbar
+	i3bar/i3bar
 
 install-exec-hook:
 	$(LN_S) -f i3 $(DESTDIR)$(bindir)/i3-with-shmlog
@@ -22,26 +17,15 @@ i3includedir=$(includedir)/i3
 i3include_HEADERS = \
 	include/i3/ipc.h
 
-dist_bin_SCRIPTS = \
-	i3-dmenu-desktop \
-	i3-migrate-config-to-v4 \
-	i3-save-tree \
-	i3-sensible-editor \
-	i3-sensible-pager \
-	i3-sensible-terminal
+dist_bin_SCRIPTS =
 
 i3confdir = $(sysconfdir)/i3
-dist_i3conf_DATA = \
-	etc/config \
-	etc/config.keycodes
+dist_i3conf_DATA = 
 
 applicationsdir = $(datarootdir)/applications
 xsessionsdir = $(datarootdir)/xsessions
-dist_applications_DATA = \
-	share/applications/i3.desktop
-dist_xsessions_DATA = \
-	share/xsessions/i3.desktop \
-	share/xsessions/i3-with-shmlog.desktop
+dist_applications_DATA = 
+dist_xsessions_DATA = 
 
 noinst_LIBRARIES = libi3.a
 
@@ -160,80 +144,16 @@ $(dirstamps):
 docs_tocdir = ${docdir}
 docs_notocdir = ${docdir}
 docs_poddir = ${docdir}
-if BUILD_DOCS
-dist_docs_toc_DATA = \
-	docs/hacking-howto.html \
-	docs/userguide.html \
-	docs/ipc.html \
-	docs/multi-monitor.html \
-	docs/wsbar.html \
-	docs/testsuite.html \
-	docs/i3bar-protocol.html \
-	docs/layout-saving.html
 
-dist_docs_notoc_DATA = \
-	docs/debugging.html
-
-dist_docs_pod_DATA = \
-	docs/lib-i3test.html \
-	docs/lib-i3test-test.html
-
-$(dist_docs_toc_DATA): docs/%.html: docs/% docs/$(dirstamp)
-	$(AM_V_GEN) @PATH_ASCIIDOC@ -a toc -n -o $@ $<
-
-$(dist_docs_notoc_DATA): docs/%.html: docs/% docs/$(dirstamp)
-	$(AM_V_GEN) @PATH_ASCIIDOC@ -n -o $@ $<
-
-docs/lib-i3test.html: testcases/lib/i3test.pm docs/$(dirstamp)
-	$(AM_V_GEN) $(top_srcdir)/docs/i3-pod2html $< $@
-
-docs/lib-i3test-test.html: testcases/lib/i3test/Test.pm docs/$(dirstamp)
-	$(AM_V_GEN) $(top_srcdir)/docs/i3-pod2html $< $@
-
-else
 dist_docs_toc_DATA =
 dist_docs_notoc_DATA =
 dist_docs_pod_DATA =
-endif
 
 ################################################################################
 # manpage generation
 ################################################################################
 
-if BUILD_MANS
-dist_man1_MANS = \
-	$(asciidoc_MANS) \
-	$(pod_MANS)
-
-asciidoc_MANS = \
-	man/i3.1 \
-	man/i3bar.1 \
-	man/i3-msg.1 \
-	man/i3-input.1 \
-	man/i3-nagbar.1 \
-	man/i3-config-wizard.1 \
-	man/i3-migrate-config-to-v4.1 \
-	man/i3-sensible-editor.1 \
-	man/i3-sensible-pager.1 \
-	man/i3-sensible-terminal.1 \
-	man/i3-dump-log.1
-
-pod_MANS = \
-	man/i3-dmenu-desktop.1 \
-	man/i3-save-tree.1
-
-$(asciidoc_MANS): man/%.1: man/%.xml man/$(dirstamp)
-	$(AM_V_GEN) out='$@'; @PATH_XMLTO@ man -o "$${out%/*}" $<
-	@stamp='$@'; $(MKDIR_P) "$${stamp%/*}"
-
-man/%.xml: man/%.man man/asciidoc.conf man/$(dirstamp)
-	$(AM_V_GEN) @PATH_ASCIIDOC@ -d manpage -b docbook -f $(top_builddir)/man/asciidoc.conf -o $@ $<
-
-$(pod_MANS): man/%.1: % man/$(dirstamp)
-	$(AM_V_GEN) @PATH_POD2MAN@ --utf8 $< > $@
-else
 asciidoc_MANS =
-endif
 
 AM_CPPFLAGS = \
 	-DSYSCONFDIR="\"$(sysconfdir)\"" \
@@ -413,23 +333,6 @@ i3bar_i3bar_SOURCES = \
 	i3bar/src/parse_json_header.c \
 	i3bar/src/workspaces.c \
 	i3bar/src/xcb.c
-
-i3_config_wizard_i3_config_wizard_CFLAGS = \
-	$(AM_CFLAGS) \
-	$(libi3_CFLAGS) \
-	$(LIBSN_CFLAGS) \
-	$(XKBCOMMON_CFLAGS)
-
-i3_config_wizard_i3_config_wizard_LDADD = \
-	$(libi3_LIBS) \
-	$(LIBSN_LIBS) \
-	$(XCB_UTIL_KEYSYMS_LIBS) \
-	$(XKBCOMMON_LIBS)
-
-i3_config_wizard_i3_config_wizard_SOURCES = \
-	i3-config-wizard/atoms.xmacro \
-	i3-config-wizard/main.c \
-	i3-config-wizard/xcb.h
 
 test_inject_randr15_CPPFLAGS = \
 	$(AM_CPPFLAGS)

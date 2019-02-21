@@ -141,8 +141,7 @@ AC_SUBST(AM_CFLAGS)
 # Checks for header files.
 AC_CHECK_HEADERS([fcntl.h float.h inttypes.h limits.h locale.h netinet/in.h paths.h stddef.h stdint.h stdlib.h string.h sys/param.h sys/socket.h sys/time.h unistd.h], , [AC_MSG_FAILURE([cannot find the $ac_header header, which i3 requires])])
 
-AC_CONFIG_FILES([Makefile testcases/lib/i3test.pm man/asciidoc.conf])
-AC_CONFIG_FILES([testcases/complete-run.pl], [chmod +x testcases/complete-run.pl])
+AC_CONFIG_FILES([Makefile])
 
 # Enable address sanitizer for non-release builds. The performance hit is a
 # 50% increase of wallclock time for the testsuite on my machine.
