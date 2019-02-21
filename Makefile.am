@@ -240,57 +240,6 @@ libi3_a_SOURCES = \
 	libi3/strndup.c \
 	libi3/ucs2_conversion.c
 
-i3_dump_log_i3_dump_log_CFLAGS = \
-	$(AM_CFLAGS) \
-	$(PTHREAD_CFLAGS) \
-	$(libi3_CFLAGS)
-
-i3_dump_log_i3_dump_log_LDADD = \
-	$(PTHREAD_LIBS) \
-	$(libi3_LIBS)
-
-i3_dump_log_i3_dump_log_SOURCES = \
-	i3-dump-log/main.c
-
-i3_input_i3_input_CFLAGS = \
-	$(AM_CFLAGS) \
-	$(libi3_CFLAGS)
-
-i3_input_i3_input_LDADD = \
-	$(libi3_LIBS) \
-	$(XCB_UTIL_KEYSYMS_LIBS)
-
-i3_input_i3_input_SOURCES = \
-	i3-input/i3-input.h \
-	i3-input/keysym2ucs.c \
-	i3-input/keysym2ucs.h \
-	i3-input/main.c
-
-i3_msg_i3_msg_CFLAGS = \
-	$(AM_CFLAGS) \
-	$(libi3_CFLAGS)
-
-i3_msg_i3_msg_LDADD = \
-	$(libi3_LIBS)
-
-i3_msg_i3_msg_SOURCES = \
-	i3-msg/main.c
-
-i3_nagbar_i3_nagbar_CFLAGS = \
-	$(AM_CFLAGS) \
-	$(LIBSN_CFLAGS) \
-	$(libi3_CFLAGS)
-
-i3_nagbar_i3_nagbar_LDADD = \
-	$(libi3_LIBS) \
-	$(LIBSN_LIBS) \
-	$(XCB_UTIL_CURSOR_LIBS)
-
-i3_nagbar_i3_nagbar_SOURCES = \
-	i3-nagbar/atoms.xmacro \
-	i3-nagbar/i3-nagbar.h \
-	i3-nagbar/main.c
-
 i3bar_i3bar_CPPFLAGS = \
 	$(AM_CPPFLAGS) \
 	-I$(top_srcdir)/i3bar/include
