@@ -1,7 +1,7 @@
 /*
  * vim:ts=4:sw=4:expandtab
  *
- * i3bar - an xcb-based status- and ws-bar for i3
+ * r3bar - an xcb-based status- and ws-bar for i3
  * © 2010 Axel Wagner and contributors (see also: LICENSE)
  *
  */
@@ -64,7 +64,7 @@ static void print_usage(char *elf_name) {
     printf("-v, --version Display version number and exit\n");
     printf("-V, --verbose Enable verbose mode\n");
     printf("\n");
-    printf(" PLEASE NOTE that i3bar will be automatically started by i3\n"
+    printf(" PLEASE NOTE that r3bar will be automatically started by i3\n"
            " as soon as there is a 'bar' configuration block in your\n"
            " config file. You should never need to start it manually.\n");
     printf("\n");
@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
                 socket_path = expand_path(optarg);
                 break;
             case 'v':
-                printf("i3bar version " I3_VERSION " © 2010 Axel Wagner and contributors\n");
+                printf("r3bar version " I3_VERSION " © 2010 Axel Wagner and contributors\n");
                 exit(EXIT_SUCCESS);
                 break;
             case 'b':
@@ -135,7 +135,7 @@ int main(int argc, char **argv) {
     if (!config.bar_id) {
         /* TODO: maybe we want -f which will automatically ask i3 for the first
          * configured bar (and error out if there are too many)? */
-        ELOG("No bar_id passed. Please let i3 start i3bar or specify --bar_id\n");
+        ELOG("No bar_id passed. Please let i3 start r3bar or specify --bar_id\n");
         exit(EXIT_FAILURE);
     }
 

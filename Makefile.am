@@ -5,7 +5,7 @@ echo-version:
 
 bin_PROGRAMS = \
 	i3 \
-	i3bar/i3bar
+	r3bar/r3bar
 
 install-exec-hook:
 	$(LN_S) -f i3 $(DESTDIR)$(bindir)/i3-with-shmlog
@@ -49,7 +49,7 @@ TESTS = testcases/complete-run.pl
 EXTRA_DIST = \
 	$(dist_docs_toc_DATA:.html=) \
 	$(dist_docs_notoc_DATA:.html=) \
-	i3bar/LICENSE \
+	r3bar/LICENSE \
 	libi3/README \
 	$(asciidoc_MANS:.1=.man) \
 	$(asciidoc_MANS:.1=.man) \
@@ -176,11 +176,11 @@ libi3_a_SOURCES = \
 	libi3/strndup.c \
 	libi3/ucs2_conversion.c
 
-i3bar_i3bar_CPPFLAGS = \
+r3bar_r3bar_CPPFLAGS = \
 	$(AM_CPPFLAGS) \
-	-I$(top_srcdir)/i3bar/include
+	-I$(top_srcdir)/r3bar/include
 
-i3bar_i3bar_CFLAGS = \
+r3bar_r3bar_CFLAGS = \
 	$(AM_CFLAGS) \
 	$(libi3_CFLAGS) \
 	$(XCB_CFLAGS) \
@@ -188,7 +188,7 @@ i3bar_i3bar_CFLAGS = \
 	$(PANGOCAIRO_CFLAGS) \
 	$(YAJL_CFLAGS)
 
-i3bar_i3bar_LDADD = \
+r3bar_r3bar_LDADD = \
 	$(libi3_LIBS) \
 	$(XCB_LIBS) \
 	$(XCB_UTIL_CURSOR_LIBS) \
@@ -196,28 +196,28 @@ i3bar_i3bar_LDADD = \
 	$(PANGOCAIRO_LIBS) \
 	$(YAJL_LIBS)
 
-i3bar_i3bar_SOURCES = \
-	i3bar/include/child.h \
-	i3bar/include/common.h \
-	i3bar/include/configuration.h \
-	i3bar/include/ipc.h \
-	i3bar/include/mode.h \
-	i3bar/include/outputs.h \
-	i3bar/include/parse_json_header.h \
-	i3bar/include/trayclients.h \
-	i3bar/include/util.h \
-	i3bar/include/workspaces.h \
-	i3bar/include/xcb_atoms.def \
-	i3bar/include/xcb.h \
-	i3bar/src/child.c \
-	i3bar/src/config.c \
-	i3bar/src/ipc.c \
-	i3bar/src/main.c \
-	i3bar/src/mode.c \
-	i3bar/src/outputs.c \
-	i3bar/src/parse_json_header.c \
-	i3bar/src/workspaces.c \
-	i3bar/src/xcb.c
+r3bar_r3bar_SOURCES = \
+	r3bar/include/child.h \
+	r3bar/include/common.h \
+	r3bar/include/configuration.h \
+	r3bar/include/ipc.h \
+	r3bar/include/mode.h \
+	r3bar/include/outputs.h \
+	r3bar/include/parse_json_header.h \
+	r3bar/include/trayclients.h \
+	r3bar/include/util.h \
+	r3bar/include/workspaces.h \
+	r3bar/include/xcb_atoms.def \
+	r3bar/include/xcb.h \
+	r3bar/src/child.c \
+	r3bar/src/config.c \
+	r3bar/src/ipc.c \
+	r3bar/src/main.c \
+	r3bar/src/mode.c \
+	r3bar/src/outputs.c \
+	r3bar/src/parse_json_header.c \
+	r3bar/src/workspaces.c \
+	r3bar/src/xcb.c
 
 test_inject_randr15_CPPFLAGS = \
 	$(AM_CPPFLAGS)
