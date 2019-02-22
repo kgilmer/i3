@@ -49,80 +49,16 @@ TESTS = testcases/complete-run.pl
 EXTRA_DIST = \
 	$(dist_docs_toc_DATA:.html=) \
 	$(dist_docs_notoc_DATA:.html=) \
-	AnyEvent-I3/Changes \
-	AnyEvent-I3/MANIFEST \
-	AnyEvent-I3/MANIFEST.SKIP \
-	AnyEvent-I3/Makefile.PL \
-	AnyEvent-I3/README \
-	AnyEvent-I3/lib/AnyEvent/I3.pm \
-	AnyEvent-I3/t/00-load.t \
-	AnyEvent-I3/t/01-workspaces.t \
-	AnyEvent-I3/t/02-sugar.t \
-	AnyEvent-I3/t/boilerplate.t \
-	AnyEvent-I3/t/manifest.t \
-	AnyEvent-I3/t/pod-coverage.t \
-	AnyEvent-I3/t/pod.t \
-	contrib/dump-asy.pl \
-	contrib/gtk-tree-watch.pl \
-	contrib/i3-wsbar \
-	contrib/per-workspace-layout.pl \
-	contrib/trivial-bar-script.sh \
-	docs/asciidoc-git.conf \
-	docs/bigpicture.png \
-	docs/i3-pod2html \
-	docs/i3-sync.dia \
-	docs/i3-sync.png \
-	docs/i3-sync-working.dia \
-	docs/i3-sync-working.png \
-	docs/keyboard-layer1.png \
-	docs/keyboard-layer2.png \
-	docs/layout-saving-1.png \
-	docs/logo-30.png \
-	docs/modes.png \
-	docs/refcard.html \
-	docs/refcard_style.css \
-	docs/single_terminal.png \
-	docs/snapping.png \
-	docs/tree-layout1.png \
-	docs/tree-layout2.png \
-	docs/tree-shot1.png \
-	docs/tree-shot2.png \
-	docs/tree-shot3.png \
-	docs/tree-shot4.png \
-	docs/two_columns.png \
-	docs/two_terminals.png \
-	docs/wsbar.dia \
-	docs/wsbar.png \
 	i3bar/LICENSE \
 	libi3/README \
 	$(asciidoc_MANS:.1=.man) \
 	$(asciidoc_MANS:.1=.man) \
-	man/asciidoc.conf.in \
 	DEPENDS \
-	I3_VERSION \
 	LICENSE \
-	PACKAGE-MAINTAINER \
-	RELEASE-NOTES-4.16 \
 	generate-command-parser.pl \
 	parser-specs/commands.spec \
 	parser-specs/config.spec \
-	parser-specs/highlighting.vim \
-	pseudo-doc.doxygen \
-	testcases/complete-run.pl.in \
-	testcases/i3-test.config \
-	testcases/lib/i3test/Test.pm \
-	testcases/lib/i3test/Util.pm \
-	testcases/lib/i3test/XTEST.pm \
-	testcases/lib/i3test.pm.in \
-	testcases/lib/SocketActivation.pm \
-	testcases/lib/StartXServer.pm \
-	testcases/lib/StatusLine.pm \
-	testcases/lib/TestWorker.pm \
-	testcases/Makefile.PL \
-	testcases/new-test \
-	testcases/restart-state.golden \
-	testcases/t \
-	testcases/valgrind.supp
+	parser-specs/highlighting.vim
 
 # dirstamps contains directories which we want to be created in $(top_builddir)
 # so that our custom rules can store files in them.
@@ -453,15 +389,3 @@ i3-config-parser.stamp: parser/$(dirstamp) generate-command-parser.pl parser-spe
 	$(AM_V_at) mv GENERATED_config_* $(top_builddir)/parser
 	$(AM_V_at) touch $@
 
-################################################################################
-# AnyEvent-I3 build process
-################################################################################
-
-anyevent-i3.stamp: AnyEvent-I3/lib/AnyEvent/I3.pm
-	$(AM_V_BUILD) (cd $(top_srcdir)/AnyEvent-I3 && perl Makefile.PL && make)
-	$(AM_V_at) touch $@
-
-CLEANFILES = \
-	i3-command-parser.stamp \
-	i3-config-parser.stamp \
-	anyevent-i3.stamp
